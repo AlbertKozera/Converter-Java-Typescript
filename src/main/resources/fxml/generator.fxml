@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #2B2B2B;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GeneratorController">
+   <children>
+      <ImageView fitHeight="610.0" fitWidth="260.0" preserveRatio="true">
+         <image>
+            <Image url="@../img/bgr_4.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="610.0" fitWidth="260.0" layoutX="550.0" nodeOrientation="RIGHT_TO_LEFT" preserveRatio="true">
+         <image>
+            <Image url="@../img/bgr_4.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="leftImage" fitHeight="90.0" fitWidth="68.0" layoutX="191.0" layoutY="11.0" preserveRatio="true">
+         <image>
+            <Image url="@../img/language.icon/Empty.png" />
+         </image></ImageView>
+      <ImageView fx:id="rightImage" fitHeight="90.0" fitWidth="68.0" layoutX="552.0" layoutY="11.0" preserveRatio="true">
+         <image>
+            <Image url="@../img/language.icon/Empty.png" />
+         </image></ImageView>
+      <Button fx:id="uploadFileButton" layoutX="149.0" layoutY="553.0" mnemonicParsing="false" onAction="#uploadFile" prefHeight="43.0" prefWidth="151.0" stylesheets="@../css/button.css" text=" Wgraj pliki">
+         <graphic>
+            <FontAwesomeIconView glyphName="UPLOAD" size="20" style="-fx-fill: #a9b7c6;" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="main" layoutX="380.0" layoutY="553.0" mnemonicParsing="false" onAction="#switchToMain" prefHeight="43.0" prefWidth="44.0" stylesheets="@../css/button.css">
+         <graphic>
+            <FontAwesomeIconView glyphName="UNDO" size="25" style="-fx-fill: #a9b7c6;" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ListView fx:id="leftListView" layoutX="86.0" layoutY="150.0" prefHeight="387.0" prefWidth="276.0" stylesheets="@../css/listView.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ListView>
+      <Hyperlink fx:id="clearList" layoutX="90.0" layoutY="508.0" onAction="#clearLeftList" prefHeight="9.0" prefWidth="25.0" stylesheets="@../css/listView.css">
+         <graphic>
+            <FontAwesomeIconView glyphName="TRASH" size="21" translateX="2.0" translateY="1.0" />
+         </graphic>
+         <font>
+            <Font size="1.0" />
+         </font>
+      </Hyperlink>
+      <ListView fx:id="rightListView" layoutX="448.0" layoutY="150.0" prefHeight="387.0" prefWidth="276.0" stylesheets="@../css/listView.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ListView>
+      <Hyperlink fx:id="clearList" layoutX="452.0" layoutY="508.0" onAction="#clearRightList" prefHeight="9.0" prefWidth="25.0" stylesheets="@../css/listView.css">
+         <graphic>
+            <FontAwesomeIconView glyphName="TRASH" size="21" translateX="2.0" translateY="1.0" />
+         </graphic>
+         <font>
+            <Font size="1.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="filesDirectory" layoutX="691.0" layoutY="508.0" onAction="#openFilesDirectory" prefHeight="9.0" prefWidth="25.0" stylesheets="@../css/listView.css">
+         <graphic>
+            <FontAwesomeIconView glyphName="FOLDER_OPEN_ALT" size="21" translateX="2.0" translateY="1.0" />
+         </graphic>
+         <font>
+            <Font size="1.0" />
+         </font>
+      </Hyperlink>
+      <Button fx:id="rightArrow" layoutX="378.0" layoutY="323.0" mnemonicParsing="false" onAction="#convertLeftToRight" prefHeight="41.0" prefWidth="0.0" stylesheets="@../css/button.css">
+         <graphic>
+            <FontAwesomeIconView glyphName="RANDOM" size="25" style="-fx-fill: #a9b7c6;" translateY="2.0" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ChoiceBox fx:id="leftLanguageChooser" layoutX="86.0" layoutY="103.0" prefHeight="11.0" prefWidth="276.0" stylesheets="@../css/choicebox.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ChoiceBox>
+      <ChoiceBox fx:id="rightLanguageChooser" layoutX="448.0" layoutY="103.0" prefHeight="36.0" prefWidth="276.0" stylesheets="@../css/choicebox.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ChoiceBox>
+   </children>
+</AnchorPane>

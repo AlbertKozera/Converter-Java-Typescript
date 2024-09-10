@@ -1,0 +1,6 @@
+{
+  "Java": "*.java",
+  "Python": "*.py",
+  "TypeScript": "*.ts",
+  "JavaScript": "*.js"
+}

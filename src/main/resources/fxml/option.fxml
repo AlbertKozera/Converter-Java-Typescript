@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #2B2B2B;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OptionController">
+   <children>
+      <ImageView fitHeight="610.0" fitWidth="260.0" preserveRatio="true">
+         <image>
+            <Image url="@../img/bgr_5.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="610.0" fitWidth="260.0" layoutX="550.0" nodeOrientation="RIGHT_TO_LEFT">
+         <image>
+            <Image url="@../img/bgr_5.png" />
+         </image>
+      </ImageView>
+      <Label alignment="TOP_CENTER" layoutX="221.0" layoutY="219.0" prefHeight="62.0" prefWidth="372.0" style="-fx-background-color: #353535;" text="Miejsce do zapisywania skonwertowanych plików" textFill="#a9b7c6">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <TextField fx:id="saveTo" layoutX="225.0" layoutY="247.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="315.0" promptText="Ścieżka do zapisu plików" stylesheets="@../css/textField.css">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <Button fx:id="pathChooser" graphicTextGap="6.0" layoutX="544.0" layoutY="247.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#choosePatchToStorageFiles" prefHeight="30.0" prefWidth="44.0" stylesheets="@../css/button.css">
+         <graphic>
+            <FontAwesomeIconView glyphName="FOLDER_OPEN" size="18" style="-fx-fill: #a9b7c6;" wrappingWidth="18.0" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label alignment="TOP_CENTER" layoutX="221.0" layoutY="293.0" prefHeight="50.0" prefWidth="372.0" style="-fx-background-color: #353535;" text="Określ czy podczas konwersji korzystać z wątków" textFill="#a9b7c6">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="threadEnabled" layoutX="350.0" layoutY="316.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="122.0" stylesheets="@../css/checkbox.css" text="Używanie wątków" textFill="#a9b7c6">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></CheckBox>
+      <Button layoutX="423.0" layoutY="355.0" mnemonicParsing="false" onAction="#saveChanges" prefHeight="43.0" prefWidth="170.0" stylesheets="@../css/button.css" text=" Zapisz zmiany">
+         <graphic>
+            <FontAwesomeIconView glyphName="SAVE" size="20" style="-fx-fill: #a9b7c6;" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="main" layoutX="380.0" layoutY="553.0" mnemonicParsing="false" onAction="#switchToMain" prefHeight="43.0" prefWidth="44.0" stylesheets="@../css/button.css">
+         <graphic>
+            <FontAwesomeIconView glyphName="UNDO" size="25" style="-fx-fill: #a9b7c6;" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>
